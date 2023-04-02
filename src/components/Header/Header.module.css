@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45rem;
+    margin: 0 auto 2rem;
+}
+
+.header strong {
+    color: var(--font-color-secondary);
+    font-size: 1.625rem;
+}
+
+.theme {
+    cursor: pointer;
+    display: flex;
+    text-transform: uppercase;
+    gap: 1rem;
+}
+
+.theme p {
+    color: var(--font-color-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color 300ms;
+}
+
+.theme:hover p {
+    color: var(--hover-theme-color);
+}
+
+.theme svg {
+    color: var(--font-color-primary);
+    transition: color 300ms;
+}
+
+.theme:hover svg {
+    color: var(--hover-theme-color);
+}
+
+@media (max-width: 768px) {
+    .header {
+        width: clamp(10rem, 85vw, 35rem);
+    }
+}

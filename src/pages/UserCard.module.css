@@ -1,0 +1,31 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userResults {
+    width: 45rem;
+    margin: 0 auto;
+}
+
+.user button {
+    margin: 2rem auto 0;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--details-color);
+    color: var(--button-color);
+    border: transparent;
+    border-radius: 12px;
+    transition: background-color 200ms;
+}
+
+.user button:hover {
+    background-color: var(--hover-details-color);
+}
+
+@media (max-width: 768px) {
+    .userResults {
+        width: clamp(10rem, 85vw, 35rem);
+    }
+}

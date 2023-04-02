@@ -1,0 +1,255 @@
+a {
+    text-decoration: none;
+    color: var(--font-color-primary);
+}
+
+.userDetails {
+    margin-top: 1rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--box-color);
+    box-shadow: 0 5px 10px var(--shadow-color);
+    color: var(--font-color-primary);
+}
+
+.userDetails header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.3rem;
+}
+
+.userDetails .headerImg img {
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.userDetails .headerName {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userDetails .headerName p {
+    margin-top: 0.5rem;
+}
+
+.userName {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.userName h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
+    color: var(--font-color-secondary);
+}
+
+.userName a {
+    font-weight: bold;
+    color: #0079ff;
+    font-size: clamp(0.8rem, 3.2vw, 1.1rem);
+}
+
+.userName a:hover {
+    text-decoration: underline;
+}
+
+.userDetails main {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 28.7rem;
+    align-self: flex-end;
+    margin-top: -2rem;
+}
+
+.userBio {
+    font-size: clamp(0.9rem, 3.4vw, 1.1rem);
+    color: var(--medium-gray);
+}
+
+.userInfo {
+    padding: 1.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    background-color: var(--bg-color);
+}
+
+.userInfoItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userInfoItem p {
+    color: var(--medium-gray);
+    font-size: clamp(0.8rem, 3.2vw, 1rem);
+    margin-bottom: 0.5rem;
+}
+
+.userInfoItem strong {
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1rem, 6vw, 1.4rem);
+    color: var(--font-color-secondary);
+}
+
+.userDetails footer {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    width: 28.7rem;
+}
+
+.otherInfo {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.infoNotAvailable {
+    pointer-events: none;
+}
+
+.infoNotAvailable p,
+a {
+    opacity: 0.7;
+}
+
+.infoNotAvailable svg {
+    opacity: 0.7;
+}
+
+.otherInfoItem,
+.infoNotAvailable {
+    cursor: default;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.otherInfoItem p,
+a,
+svg {
+    opacity: 1;
+}
+
+.otherInfoItem svg {
+    min-width: 20px;
+}
+
+.otherInfoItem a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.otherInfoItem,
+.infoNotAvailable p,
+a {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .userDetails {
+        padding: 2rem;
+    }
+
+    .userDetails .headerImg img {
+        width: clamp(7rem, 17vw, 12rem);
+        border-radius: 50%;
+    }
+
+    .userDetails .headerName {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .userName h1 {
+        margin: 0;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .userName a {
+        margin-bottom: 0.5rem;
+    }
+
+    .headerName p {
+        font-size: clamp(0.75rem, 2.4vw, 0.95rem);
+    }
+
+    .userDetails main {
+        width: 100%;
+        margin-top: 1.2rem;
+    }
+
+    .userBio {
+        font-size: clamp(0.85rem, 2.3vw, 1rem);
+    }
+
+    .userInfoItem p {
+        font-size: clamp(0.85rem, 2.2vw, 1rem);
+    }
+
+    .userDetails footer {
+        width: 100%;
+    }
+
+    .otherInfo p {
+        font-size: clamp(0.75rem, 2.2vw, 1rem);
+    }
+
+    .otherInfo a {
+        font-size: clamp(0.75rem, 2.2vw, 1rem);
+    }
+
+    .otherInfo {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .userDetails {
+        padding: 2rem 1.5rem;
+    }
+
+    .userDetails header {
+        gap: 1.5rem;
+    }
+
+    .userDetails .headerImg img {
+        width: clamp(5rem, 25vw, 12rem);
+        border-radius: 50%;
+    }
+
+    .userDetails main {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .userInfoItem p {
+        font-size: clamp(0.75rem, 3vw, 0.9rem);
+    }
+
+    .userInfoItem strong {
+        font-size: (1rem, 5vw, 1.4rem);
+    }
+
+    .otherInfoItem,
+    .infoNotAvailable {
+        gap: 0.5rem;
+    }
+
+    svg {
+        min-width: 20px;
+    }
+}

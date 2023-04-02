@@ -1,0 +1,34 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: clamp(40vw, 90vw, 70rem);
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .home {
+        display: grid;
+        width: clamp(40vw, 90vw, 40rem);
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        display: grid;
+        width: clamp(40vw, 90vw, 30rem);
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        display: grid;
+        width: clamp(40vw, 80vw, 20rem);
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+    }
+}
