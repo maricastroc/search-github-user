@@ -6,7 +6,7 @@ import styles from "./Index.module.css";
 import {Card} from "../components/Card/Card";
 
 export function Index() {
-    const [usersList, setUsersList] = useState([]);
+    const [usersList, setUsersList] = useState<any[]>([]);
 
     useEffect(() => {
         fetch(`https://api.github.com/users`)

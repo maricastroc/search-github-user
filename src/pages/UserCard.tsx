@@ -11,7 +11,7 @@ import {NavLink} from "react-router-dom";
 export function UserCard() {
     let username = useParams();
 
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState<any>({});
 
     useEffect(() => {
         fetch(

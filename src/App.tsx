@@ -11,7 +11,7 @@ import {Header} from "./components/Header/Header";
 export function App() {
     const [darkMode, setMode] = useState(true);
 
-    function setDarkMode(darkMode) {
+    function setDarkMode(darkMode: boolean) {
         darkMode ? setMode(true) : setMode(false);
     }
 

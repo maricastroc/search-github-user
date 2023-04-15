@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-import {Card} from "../components/Card/Card";
+import {Card, CardProps} from "../components/Card/Card";
 import {Error} from "../components/Error/Error";
 
 import styles from "./SearchUsers.module.css";
@@ -12,7 +12,7 @@ export function SearchUsers() {
 
     const [hideError, setHideError] = useState(true);
 
-    const [usersList, setUsersList] = useState([]);
+    const [usersList, setUsersList] = useState<any[]>([]);
     const [totalCountUsers, setTotalCountUsers] =
         useState("");
 

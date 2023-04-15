@@ -6,7 +6,11 @@ import styles from "./Header.module.css";
 import {Sun} from "phosphor-react";
 import {Moon} from "phosphor-react";
 
-export function Header(props) {
+interface HeaderProps {
+  onClick: (darkMode: boolean) => void
+}
+
+export function Header(props: HeaderProps) {
     const [darkMode, setDarkMode] = useState(true);
 
     function setTheme() {

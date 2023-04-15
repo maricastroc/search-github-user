@@ -5,8 +5,27 @@ import {Browser} from "phosphor-react";
 import {TwitterLogo} from "phosphor-react";
 import {Buildings} from "phosphor-react";
 
-export function UserDetails(props) {
-    function convertDate(datetime) {
+export interface userProps {
+  created_at: Date,
+  avatar_url: string,
+  company: string,
+  name: string,
+  login: string,
+  bio: string,
+  public_repos: number,
+  following: number,
+  followers: number,
+  twitter_username: string,
+  location: string,
+  blog: string
+}
+
+interface UserDetailsProps {
+  user: userProps
+}
+
+export function UserDetails(props: UserDetailsProps) {
+    function convertDate(datetime: Date) {
         const date = new Date(datetime);
         const day = date.getDate();
         const month = date.toLocaleString("default", {
@@ -16,7 +35,7 @@ export function UserDetails(props) {
         return `${day} ${month} ${year}`;
     }
 
-    function displayCompany(company) {
+    function displayCompany(company: string) {
         if (!company) {
             return <p>Not Available</p>;
         } else if (company.includes("@")) {

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {ChangeEvent, InvalidEvent, useState} from "react";
 import {MagnifyingGlass} from "phosphor-react";
 
 import styles from "./SearchBar.module.css";
@@ -7,12 +7,12 @@ import {NavLink} from "react-router-dom";
 export function SearchBar() {
     const [inputText, setInputText] = useState("");
 
-    function handleSetInputText(ev) {
+    function handleSetInputText(ev: ChangeEvent<HTMLInputElement>) {
         ev.target.setCustomValidity("");
         setInputText(ev.target.value);
     }
 
-    function handleNewUserInvalid(ev) {
+    function handleNewUserInvalid(ev: InvalidEvent<HTMLInputElement>) {
         ev.target.setCustomValidity(
             "This field is required!"
         );
