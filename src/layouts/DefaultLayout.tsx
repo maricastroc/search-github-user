@@ -1,11 +1,11 @@
-import { Outlet } from 'react-router-dom'
-import { SearchBar } from '../components/SearchBar/SearchBar'
+import {Outlet} from "react-router-dom";
+import {SearchBar} from "../components/SearchBar/SearchBar";
 
 export function DefaultLayout() {
-  return (
-    <>
-      <SearchBar />
-      <Outlet />
-    </>
-  )
+    return (
+        <>
+            <SearchBar />
+            <Outlet />
+        </>
+    );
 }
