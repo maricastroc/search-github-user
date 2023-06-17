@@ -19,15 +19,14 @@ export function Card(props: CardProps) {
         </div>
       </div>
       <form className={styles.features}>
-        <button className={styles.profileBtn}>
-          <a
-            target="_blank"
-            href={`https://github.com/${props.username}`}
-            rel="noreferrer"
-          >
-            View Profile
-          </a>
-        </button>
+        <a
+          className={styles.profileBtn}
+          target="_blank"
+          href={`https://github.com/${props.username}`}
+          rel="noreferrer"
+        >
+          View Profile
+        </a>
         <NavLink to={`/user/${props.username}/${props.user}`} title="User">
           <button className={styles.infoBtn}>More Info</button>
         </NavLink>

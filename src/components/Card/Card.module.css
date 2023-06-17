@@ -53,6 +53,17 @@
 }
 
 .profileBtn {
+    cursor: pointer;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-size: 0.9rem;
+    width: 9rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border-color: transparent;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    transition: background-color 200ms;
     color: var(--font-color-primary);
     background-color: var(--bg-color);
 }
